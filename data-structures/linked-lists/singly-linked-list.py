@@ -22,6 +22,7 @@ class SinglyLinkedList(LinkedList):
         print("Deleting node: ", node.value)
         if self.head == node:
             self.head =  self.head.next
+            return
 
         curr = self.head
         while curr.next is not None and curr.next != node:
@@ -45,4 +46,8 @@ if __name__ == '__main__':
     linked_list.traverse_and_print()
 
     linked_list.delete_specific_node(n1)
+    linked_list.traverse_and_print()
+
+    linked_list.delete_specific_node(n3)
+    linked_list.delete_specific_node(n4)
     linked_list.traverse_and_print()
